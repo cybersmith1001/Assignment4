@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Can You Remember Your Classmates</title> <!-- Gives a title to the document which can be seen in the browser-->
+    <script src="https://cdn.tailwindcss.com"></script> <!-- Allows Tailwind classes to be added and linked to the code-->
+
+</head>
+    <body>
+  
+     <section>
+        
+        <h1 id="school_name" class="text-center text-sky-600 text-lg mt-10">Austin Friars School</h1> <!-- Page content-->
+
+         <h1 id="1999" class="text-center text-sky-600 text-lg">Males in 5th Form 1999</h1>
+
+              <div class="text-center mt-5 mb-0">
+
+         <button id="btn" class="text-center text-sky-600 text-lg">See School Motto</button> <!--A none visible button that allows text to be clicked and changed via JavaScript-->
+        </div>
+        
+
+        <div class="text-center mt-5 mb-0"> <!--Page Styling-->
+
+        <button id="btn1" type="button" class="bg-blue-600 text-white px-5 py-2 rounded" onclick=AreYouSure()> Cheat </button> <!--Creates a visible clickable button that 
+                                                                                                                                    prompts the user in the browser via an pop-up alert box-->
+        <script>
+            function AreYouSure() {
+              alert("YOU COULD HAVE CHOSEN - HARRISON, BEARN, LOWTHIAN, BRADLEY, NUTTALL, SMITH, STACEY, GRIMALDI, FURGUSON, MOULEM, ROUTHLEDGE, PIRERI, MURRAY there is still more");
+            }   
+    </script>                              <!--Creates details to go in pop-up box (names of classmates)-->
+    
+    <h2 id="define" class="text-sky-600 text-lg mt-10">How many people from your year group can you remember? Do you concur on their nicknames? Do your descriptions match?</h2>
+
+    </div>
+    
+    </section>
+
+        <form action="/" method="POST" id="contact-form" class="flex flex-col p-20 gap-4">  <!--Creates a form submittable vis the POST method-->
+            <div class="grid grid-cols-1 gap-2">
+                <label for="full_name">Full Name</label>
+                <input class="border border-blue-700 p-2" type="text" name="full_name" placeholder="Enter Full Name" /> <!--In regards to the boxes created: Type is text
+                                                                                                                                a physical label is given via name
+                                                                                                                                        a prompt is given greyed out in the box -->
+            </div>
+    
+            <div class="grid grid-cols-1 gap-2">
+                <label for="NickName">Nick Name</label>
+                <input class="border border-blue-700 p-2" type="text" name="NickName" placeholder="Enter Nickname" />
+            </div>
+
+            <div class="grid grid-cols-1 gap-2">
+                <label for="Description">Discription</label>
+                <input class="border border-blue-700 p-2" type="text" name="Description" placeholder="Enter Discription" />
+            </div>
+    
+            <div>
+
+                <button id="btn2" type="submit" class="bg-blue-600 text-white px-5 py-2 rounded"> Step One <br> Press to Submit Data </button>  
+                <!--Creates a physical clickable button which submits the data -->
+
+                <button id="btn3" type="submit" class="bg-red-600 text-white px-5 py-2 rounded" onclick = "clearAllInputs()"> Step Two <br> Press to Add Next</button>
+                <!--Clears the fields after submission to allow another entry-->
+                <!--Note I did try having these in the same ID but the data was cleared within the console log and returned blank-->
+
+            </div>
+            </div>
+            </form>
+
+            <button id="offical_website">Austin Friars Website</button> <!--Creates a none physical button which can be used to display a child element-->
+
+
+
+    <script src="./script.js"></script> <!--Links the .js (JavaScript file) to the HTML code-->
+
+</body>
+</html>
